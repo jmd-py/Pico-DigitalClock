@@ -51,8 +51,8 @@ colorB = 64
 index = 0
 lcd=RGB1602.RGB1602(16,2)
 lcd.clear()
-ssid = 'DBACS'
-password = 'BABABA1235'
+ssid = 'Wifi SSID'
+password = 'Wifi Password'
 wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
 wlan.connect(ssid, password)
@@ -71,8 +71,8 @@ if wlan.status() != 3:
 else:
     speak('Connected!','')
 while True:
-    api_key = "5e9ef1d54504e8683858cba62e1a69d6"
-    location = "Brambleton"
+    api_key = "OpenWeatherMap API Key"
+    location = "Province"
     url = "http://api.openweathermap.org/data/2.5/weather?q={}&appid={}".format(location, api_key)
     response = urequests.get(url)
     data = response.json()
